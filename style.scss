@@ -1,0 +1,169 @@
+
+$main-background-image: 'http://cdn.shopify.com/s/files/1/2031/5633/files/Landing_1600x.jpg?v=1505827704';
+$primary-color: white;
+$hover-font-color: black;
+$border-color: rgba(255,255,255,0.2);
+$border-hover-color: lightgrey;
+$bg-color: #a6c2cd;
+
+body, html {
+height: 100%;
+margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('http://cdn.shopify.com/s/files/1/2031/5633/files/Landing_1600x.jpg?v=1505827704');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center top;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color;
+   
+    .menu {
+        display:flex;
+        justify-content: space-between;
+        height: 80px;
+        border-bottom: 1px solid $border-color;
+        color: $primary-color;
+    
+        &:hover {
+            background-color: $primary-color;
+
+            .menu-link {
+                color: $hover-font-color;
+            }
+           
+
+            .left-item {
+                border-right: 1px solid $border-hover-color;
+            }
+
+            .right-item {
+                border-left: 1px solid $border-hover-color;
+            }
+
+            .logo {
+                filter:none;
+            }
+        }
+    
+        &-right-items {
+            display: flex;
+
+            .left-item {
+                border-right: 1px solid $border-color; 
+               // padding: 0 5%;
+            
+            }
+        }
+
+        &-left-items {
+            display: flex; 
+
+            .right-item {
+                border-left: 1px solid $border-color;
+              //  padding: 0 7%;
+            }  
+        }
+
+        &-item {
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover .menu-link::after {
+                width: 100%;
+            }
+            
+            .menu-link {
+                color: $primary-color;
+                display: inline-block;
+                text-decoration: none;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background: #66cae0;
+                    transition: width .3s;
+                }
+            }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            filter: invert(100%);
+        }
+    }
+
+    .product-description {
+        color:$primary-color;
+        max-width: 341px;
+        margin-left: 120px;
+        line-height: 1.7em;
+
+        .title {
+            font-family: initial;
+            font-size: 44px;
+            margin-bottom: 17px;
+        }
+
+        .description {
+            font-size: 19px;
+            font-weight: 300;
+        }
+    }
+
+    .solution-bar {
+        display: flex;
+        height: 130px;
+        border-top: 1px solid $border-color;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            color: $primary-color;
+            cursor: pointer;
+
+            &:hover {
+                color: $hover-font-color;
+                background-color: $primary-color;
+
+                .solution-icon {
+                     filter: invert(100%);
+                }
+            }
+
+            .solution-icon {
+                height: 27px;
+                width: 27px;
+                margin-top: 20px;
+            }
+
+            .solution-text {
+                padding-top: 15px;
+            }
+        }
+    } 
+}
+
+.fonts {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12.5px;
+    letter-spacing: 0.1em;
+    font-style: normal; 
+    
+}
+
+
