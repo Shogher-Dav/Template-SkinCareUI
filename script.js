@@ -16,3 +16,13 @@ function removeClass(){
     const headerSolution = document.getElementById('header-solution');
     headerSolution.style.display = 'none';
 }
+
+function openSolutions() {
+    const solutions = document.getElementById('solution');
+    solutions.style.display='block';
+    solutions.style.height='100vh';
+}
+function closeSolutions() {
+    const solutions = document.getElementById('solution');
+    solutions.style.display='none';
+}
