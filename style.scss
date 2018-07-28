@@ -1,5 +1,6 @@
 
 $main-background-image: 'http://cdn.shopify.com/s/files/1/2031/5633/files/Landing_1600x.jpg?v=1505827704';
+$main-background-image-mobile: 'http://cdn.shopify.com/s/files/1/2031/5633/files/mobile_960x.jpg?v=1510074848';
 $primary-color: white;
 $hover-font-color: black;
 $border-color: rgba(255,255,255,0.2);
@@ -15,13 +16,19 @@ margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url('http://cdn.shopify.com/s/files/1/2031/5633/files/Landing_1600x.jpg?v=1505827704');
+    background-image: url($main-background-image);
     background-repeat:no-repeat;
     background-size: cover;
     background-position:center top;
     width: 100%;
     height: 100%;
     background-color: $bg-color;
+    @media only screen and (max-width: 950px){
+        background-image: url($main-background-image-mobile);
+        .find-solutions-mobile {
+            display: flex;
+        }
+    }
     
     .header {
         .link {
@@ -125,6 +132,21 @@ margin: 0;
             height: 80px;
             border-bottom: 1px solid $border-color;
             color: $primary-color;
+            @media only screen and (max-width: 950px) {
+                .menu-left-items {
+                    display: none;
+                }
+                .menu-right-items {
+                    display: none;
+                }
+                .open-slide {
+                    display: block;
+                }
+                .menu-right-items-mobile {
+                    display: flex;
+                }
+            }
+           
 
             &:hover {
                 background-color: $primary-color;
@@ -143,8 +165,17 @@ margin: 0;
                 }
 
                 .logo {
-                    filter:none;
+                    filter: none;
                 }
+                .menu-icon {
+                    stroke: $hover-font-color;
+                }
+                .menu-right-items-mobile {
+                   img {
+                       filter: none;
+                   }
+                }
+                
             }
         
             &-left-items {
@@ -179,21 +210,6 @@ margin: 0;
                 &:hover .link::after {
                     width: 100%;
                 }
-                
-                // .menu-link {
-                //     color: $primary-color;
-                //     display: inline-block;
-                //     text-decoration: none;
-
-                //     &:after {
-                //         content: '';
-                //         display: block;
-                //         width: 0;
-                //         height: 2px;
-                //         background: #66cae0;
-                //         transition: width .3s;
-                //     }
-                // }
             }
 
             .logo {
@@ -208,6 +224,8 @@ margin: 0;
         max-width: 341px;
         margin-left: 120px;
         line-height: 1.7em;
+        position: absolute;
+        bottom: 400px;
 
         .title {
             font-family: initial;
@@ -225,6 +243,9 @@ margin: 0;
         display: flex;
         height: 130px;
         border-top: 1px solid $border-color;
+        @media only screen and (max-width: 950px) {
+                display: none;
+        }
 
         &-item {
             display: flex;
@@ -277,5 +298,65 @@ margin: 0;
     font-size: 12.5px;
     letter-spacing: 0.1em;
     font-style: normal; 
+    
+}
+
+
+ .open-slide {
+     display: none;
+     padding-top: 30px;
+     padding-bottom: 30px;
+     margin-left: 15px;
+ }
+ .menu-right-items-mobile {
+    display: none;
+    align-items: center;
+    :first-child{
+        margin-right: 10px;
+    }
+    img {
+        filter: invert(100%);
+    }
+}
+
+.find-solutions-mobile {
+    display:none;
+    justify-content: center;
+    align-items: center;
+    bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: fixed;
+    background: #282828;
+    color:$primary-color;
+    left: 0;
+    right: 0; 
+    padding: 15px 0;
+    cursor: pointer;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 5px;
+            width:0;
+            background: -moz-linear-gradient(left, #64a3d9 0%, #3ac7f4 50%, #6ccce5 100%);
+            background: -webkit-linear-gradient(left, #64a3d9 0%, #3ac7f4 50%, #6ccce5 100%);
+            background: linear-gradient(to right, #64a3d9 0%, #3ac7f4 50%, #6ccce5 100%);
+            transition: width 0.3s linear;
+    }
+    
+    &:hover::after{
+        width: 100%
+    }
+    p {
+        margin-bottom: 0; 
+        font-size: 0.9em 
+    }
+    img {
+        filter: invert(100%);
+        margin-right: 10px;
+    }
     
 }
