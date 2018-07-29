@@ -1,10 +1,6 @@
 $main-background-image: 'http://cdn.shopify.com/s/files/1/2031/5633/files/Landing_1600x.jpg?v=1505827704';
 $main-background-image-mobile: 'http://cdn.shopify.com/s/files/1/2031/5633/files/mobile_960x.jpg?v=1510074848';
-$primary-color: white;
-$hover-font-color: black;
-$border-color: rgba(255,255,255,0.2);
-$border-hover-color: lightgrey;
-$bg-color: #a6c2cd;
+@import 'color-theme.scss';
 
 body, html {
 height: 100%;
@@ -37,8 +33,8 @@ margin: 0;
                 display: block;
                 width: 0;
                 height: 2px;
-                background: #66cae0;
-                transition: width .3s;
+                background: $animation-border-color;
+                transition: width 0.3s;
             }
        }
       
@@ -46,7 +42,7 @@ margin: 0;
             display: none;
             height: 130px;
             border-top: 1px solid $border-hover-color;
-            background-color: $primary-color;
+            background-color: $white;
         
             @keyframes shimmy {
                 0% {
@@ -120,7 +116,7 @@ margin: 0;
                 filter: invert(100%);
             }
             .header-solution-text {
-                color: $hover-font-color;
+                color: $black;
                 padding-top: 15px;
         }
         }
@@ -130,7 +126,7 @@ margin: 0;
             justify-content: space-between;
             height: 80px;
             border-bottom: 1px solid $border-color;
-            color: $primary-color;
+            color: $white;
             @media only screen and (max-width: 950px) {
                 .menu-left-items {
                     display: none;
@@ -148,10 +144,10 @@ margin: 0;
            
 
             &:hover {
-                background-color: $primary-color;
+                background-color: $white;
 
                 .link {
-                    color: $hover-font-color;
+                    color: $black;
                 }
             
 
@@ -170,7 +166,7 @@ margin: 0;
                    
                 }
                 .menu-icon {
-                    stroke: $hover-font-color;
+                    stroke: $black;
                 }
                 .menu-right-items-mobile {
                    img {
@@ -203,7 +199,7 @@ margin: 0;
                 align-items: center;
                 cursor: pointer;
                 a {
-                    color: $primary-color;
+                    color: $white;
                     text-decoration: none;
                 }
 
@@ -223,7 +219,7 @@ margin: 0;
         }
     }
     .product-description {
-        color:$primary-color;
+        color: $white;
         max-width: 341px;
         margin-left: 120px;
         line-height: 1.7em;
@@ -247,7 +243,7 @@ margin: 0;
         height: 130px;
         border-top: 1px solid $border-color;
         @media only screen and (max-width: 950px) {
-                display: none;
+              height: 0;
         }
 
         &-item {
@@ -256,13 +252,13 @@ margin: 0;
             justify-content: center;
             align-items: center;
             flex: 1;
-            color: $primary-color;
+            color: $white;
             cursor: pointer;
 
             
             &:hover {
-                color: $hover-font-color;
-                background-color: $primary-color;
+                color: $black;
+                background-color: $white;
 
                 .solution-icon {
                      filter: invert(100%);
@@ -331,8 +327,8 @@ margin: 0;
     margin-left: 15px;
     margin-right: 15px;
     position: fixed;
-    background: #282828;
-    color:$primary-color;
+    background: $find-solutions-bg;
+    color: $white;
     left: 0;
     right: 0; 
     padding: 15px 0;
@@ -373,14 +369,15 @@ margin: 0;
 @media only screen and (max-width: 950px) {
     .solution-bar {
         overflow-y:scroll;
-        height: 100vw;
+        height: 0;
         z-index: 100;
         position: fixed;
-        top: 0;
+        bottom: 0;
         left: 0;
         width: 100%;
-        height: 100%;
-        background-color:#f7f9f9;
+        background-color: $mobile-soulutions-bg;
+        transition: 0.3s linear;
+
         .all-product {
             display:block;
         }
@@ -391,12 +388,12 @@ margin: 0;
             display: block;
         }
      .solution-text1 {
-        color:black
+        color: $black
     }
    
         .solution {
             display: flex;
-            background-color:#f7f9f9;
+            background-color: $mobile-soulutions-bg;
             align-items: center;
                 img {
                     filter: invert(100%);
@@ -404,8 +401,8 @@ margin: 0;
 
            .solution-bar-item { 
                 padding: 20px 0; 
-                border-top: 1px solid #ececec;
-                border-right: 1px solid #ececec;
+                border-top: 1px solid $mobile-border;
+                border-right: 1px solid $mobile-border;
            }   
         }
     }
@@ -417,10 +414,10 @@ margin: 0;
     text-align: center;
     border-top: 1px solid $border-hover-color;
     padding: 45px 0;
-    color: #333;
-    background-color:#f7f9f9;
+    color: $all-product-text;
+    background-color: $mobile-soulutions-bg;
     &:hover {
-        background-color: $primary-color;
+        background-color: $white;
     }
 }
 
@@ -429,7 +426,7 @@ margin: 0;
     input[type='text'] {
         width: 100%;
         border: none;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid $input-border;
         padding: 25px 20px 25px 60px;
         font-size: 18px;
         font-weight: bold;
@@ -446,7 +443,7 @@ margin: 0;
 }
 
 input[type='text']::placeholder {
-    color: #999;
+    color: $input-text-color;
     opacity: 0.5;
 }
 

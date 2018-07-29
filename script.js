@@ -22,7 +22,9 @@ function openSolutions() {
 }
 function closeSolutions() {
     const solutions = document.getElementById('solution');
-    solutions.style.display='none';
+   // solutions.style.display='none';
+    solutions.style.height='0';
+
 }
 
 function openSlideMenu() {

@@ -1,3 +1,4 @@
+@import 'color-theme.scss';
 .left-side-menu {
     height:100%;
     width:0;
@@ -8,8 +9,7 @@
     overflow-x:hidden;
     padding-top: 3px;
     overflow-y: scroll;
-    background-color: #242424;
-    color: #fff;
+    background-color: $left-menu-bg;
     padding-top: 3px;
     transition:0.3s ease-in-out;
 
@@ -34,7 +34,7 @@
   }
 
   .link-heading {
-    color: #777;
+    color: $link-head-color;
     font-size: 13px;
     padding-bottom: 0;
     text-transform: uppercase;
@@ -42,7 +42,7 @@
   }
 
   .link-item {
-    color: #fff;
+    color: $white;
     padding: 3px 0;
     display: block;
     font-size: 16px;
@@ -51,7 +51,7 @@
   
   a {
       &:hover {
-        color: #6ccce5;
+        color: $hover-text;
         text-decoration: none;
       }
   }
@@ -62,14 +62,14 @@
 }
 
 .header-active-style {
-    background-color: white;
+    background-color: $white;
 
     .menu-icon {
-        stroke: black;
+        stroke:$black;
     }
 
     .menu-right-items-mobile {
-        
+
        img {
            filter: none;
        }
