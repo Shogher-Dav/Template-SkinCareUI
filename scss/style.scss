@@ -164,7 +164,10 @@ margin: 0;
                 }
 
                 .logo {
-                    filter: none;
+                    img {
+                        filter: none;
+                    }
+                   
                 }
                 .menu-icon {
                     stroke: $hover-font-color;
@@ -182,7 +185,6 @@ margin: 0;
             
                 .left-item {
                     border-right: 1px solid $border-color; 
-                // padding: 0 5%;
                 
                 }
             }
@@ -192,7 +194,6 @@ margin: 0;
 
                 .right-item {
                     border-left: 1px solid $border-color;
-                //  padding: 0 7%;
                 }  
             }
 
@@ -214,7 +215,10 @@ margin: 0;
             .logo {
                 display: flex;
                 align-items: center;
-                filter: invert(100%);
+                img {
+                    filter: invert(100%);
+                }
+               
             }
         }
     }
@@ -224,7 +228,7 @@ margin: 0;
         margin-left: 120px;
         line-height: 1.7em;
         position: absolute;
-        bottom: 400px;
+        bottom: 418px;
 
         .title {
             font-family: initial;
@@ -446,8 +450,10 @@ input[type='text']::placeholder {
     opacity: 0.5;
 }
 
-.bottom {
+.bottom-side {
     display: none;
     padding: 20px;
     border-top: 1px solid $border-hover-color;
 }
+
+

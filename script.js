@@ -1,6 +1,4 @@
-
-var createKeyframe = require('create-keyframe');
- function addClass(){
+function addClass(){
     const headerSolution = document.getElementById('header-solution');
     headerSolution.style.display = 'flex';
     for(let i=0; i<10; i++) {
@@ -25,4 +23,13 @@ function openSolutions() {
 function closeSolutions() {
     const solutions = document.getElementById('solution');
     solutions.style.display='none';
+}
+
+function openSlideMenu() {
+    const leftSideMenu = document.getElementById('left-side-menu');
+    const menu = document.getElementById('menu');
+    const logo = document.getElementById('logo');
+    menu.classList.add('header-active-style');
+    logo.style.filter = 'none';
+    leftSideMenu.classList.toggle('show-left-bar');
 }

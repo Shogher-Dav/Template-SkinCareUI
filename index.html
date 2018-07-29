@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/leftMenu.css">
+	<script src="script.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <title>Document</title>
@@ -36,7 +37,7 @@
 			  </span>
 			  
             <div class="logo">
-                <img  src="http://cdn.shopify.com/s/files/1/2031/5633/t/1/assets/shopskin-logo.svg?15042545556345816934" alt="">
+                <img id="logo" src="http://cdn.shopify.com/s/files/1/2031/5633/t/1/assets/shopskin-logo.svg?15042545556345816934" alt="">
 			</div>
 			<div class="menu-right-items-mobile">
 				<div onclick="openSolutions()">
@@ -57,7 +58,57 @@
                         <a class="link" href="#">Bag(0)</a>
                     </div>
             </div> 
-        </div>
+		</div>
+		<div id="left-side-menu" class="left-side-menu">
+			<div class="menu-content">
+				<div class="gradiend-border"></div>
+				<ul class="mobile-menu">
+					<li class="mobile-menu-item heading-item">
+						<a class="link-heading" href="">Shop</a>
+					</li>
+					<li class="mobile-menu-item">
+						<a class="link-item" href="">Find Solutions</a>
+					</li>
+					<li class="mobile-menu-item">
+						<a class="link-item" href="">Product</a>
+					</li>
+					<li class="mobile-menu-item">
+						<a class="link-item" href="">Ingredients</a>
+					</li>
+					<li class="mobile-menu-item heading-item">
+						<a class="link-heading" href="">Account</a>
+					</li>
+					<li class="mobile-menu-item">
+						<a class="link-item" href="">Recent Orders</a>
+					</li>
+					<li class="mobile-menu-item">
+						<a class="link-item" href="">Addresses</a>
+					</li>
+					<li class="mobile-menu-item">
+						<a class="link-item" href="">Subscriptions</a>
+					</li>
+					<li class="mobile-menu-item heading-item">
+						<a class="link-heading" href="">Shopskin</a>
+					</li>
+					<li class="mobile-menu-item ">
+						<a class="link-item" href="">About Us</a>
+					</li>
+					<li class="mobile-menu-item">
+						<a class="link-item" href="">Contact Us</a>
+					</li>
+					<li class="mobile-menu-item heading-item">
+						<a class="link-heading" href="">Legal</a>
+					</li>
+					<li class="mobile-menu-item">
+						<a class="link-item" href="">Privacy</a>
+					</li>
+					<li class="mobile-menu-item">
+						<a class="link-item" href="">Terms of Service</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
         <div class="header-solution fonts" id="header-solution" onmouseover="addClass()" onmouseout="removeClass()">
                 <div class="header-solution-item" id="solution-bar-item">
                         <img class="header-solution-icon" src="https://cdn.shopify.com/s/files/1/2031/5633/files/wrinkles-light.svg?14651899126997904705" alt="">
@@ -185,7 +236,7 @@
 						<p class="solution-text2">Shop Now</p>
 				</div>
 			</div>
-			<div class="solution bottom"></div>
+			<div class="solution bottom-side"></div>
         </div>
     </div>
 </body>
