@@ -14,6 +14,7 @@ body, html {
   width: 100%;
   height: 100%;
   background-color: #a6c2cd;
+  transition: all 0.3s linear;
 }
 @media only screen and (max-width: 950px) {
   .main-container {
@@ -112,6 +113,8 @@ body, html {
   height: 80px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 @media only screen and (max-width: 950px) {
   .main-container .header .menu .menu-left-items {
@@ -128,7 +131,7 @@ body, html {
   }
 }
 .main-container .header .menu:hover {
-  background-color: white;
+  background: white;
 }
 .main-container .header .menu:hover .link {
   color: black;
@@ -164,7 +167,6 @@ body, html {
   padding: 0 30px;
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 .main-container .header .menu-item a {
   color: white;
@@ -201,6 +203,7 @@ body, html {
   display: flex;
   height: 130px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 @media only screen and (max-width: 950px) {
   .main-container .solution-bar {
@@ -214,7 +217,6 @@ body, html {
   align-items: center;
   flex: 1;
   color: white;
-  cursor: pointer;
 }
 .main-container .solution-bar-item:hover {
   color: black;
@@ -267,7 +269,6 @@ body, html {
 }
 .menu-right-items-mobile img {
   filter: invert(100%);
-  cursor: pointer;
 }
 
 .find-solutions-mobile {
